@@ -6,7 +6,7 @@ pipeline {
                 echo 'GIT PULL START'
                 git  branch:'main', credentialsId: 'Git_Credentials', url: 'https://github.com/abbasmirza-bfdl/basic_temp.git'
                 echo 'GIT PULL END'
-                echo $WORKSPACE
+                echo '$WORKSPACE'
             }
                 
         }
