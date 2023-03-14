@@ -14,7 +14,7 @@ pipeline {
                         if (!fileExists('utils.zip')) {
                             sh script:'''
                             echo "ZIP START"
-                            zip -r ../utils.zip *
+                            zip -r utils.zip index.html
                             echo "ZIP END"
                             '''
                             }
