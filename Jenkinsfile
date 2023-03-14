@@ -33,7 +33,7 @@ pipeline {
                         sudo chkconfig httpd on
                         sudo chmod o+w /var/www/html
                         '
-                        scp utils.zip ec2-user@43.205.128.135:/var/www/html
+                        scp utils.zip ec2-user@44.201.7.203:/var/www/html
                         ssh -o StrictHostKeyChecking=no ec2-user@44.201.7.203 '
                         cd /var/www/html
                         unzip utils.zip -d .
