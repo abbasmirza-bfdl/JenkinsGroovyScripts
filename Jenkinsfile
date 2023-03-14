@@ -8,6 +8,19 @@ pipeline {
                 echo 'GIT PULL END'
                 echo '$WORKSPACE'
             }
+        stage("package"){
+            steps{
+                 script {
+                        if (!fileExists('utils.zip')) {
+                            sh script:'''
+                            echo "zip htmls in utils"
+                            cd templates && zip -r ../utils.zip *
+                            '''
+                            }
+                        } 
+                    }
+                }
+                
                 
         }
     }
