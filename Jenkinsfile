@@ -7,7 +7,7 @@ pipeline {
                 git  branch:'main', credentialsId: 'Git_Credentials', url: 'https://github.com/abbasmirza-bfdl/basic_temp.git'
                 echo 'GIT PULL END'
                 echo '$WORKSPACE'
-            }
+            }}
         stage("package"){
             steps{
                  script {
@@ -24,4 +24,4 @@ pipeline {
                 
         }
     }
-}
+
